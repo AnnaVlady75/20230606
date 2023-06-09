@@ -57,7 +57,6 @@ public class DZ01 {
             }
         }
 
-
     static int num_most_high_bit(int i) {
         return  Integer.toBinaryString(i).length();
     }

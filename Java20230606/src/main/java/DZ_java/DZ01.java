@@ -1,3 +1,5 @@
+package DZ_java;
+
 import java.util.Random;
 
 //Первый семинар.

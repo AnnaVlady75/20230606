@@ -33,16 +33,6 @@ import java.util.Scanner;
 //    }
 //}
 
-// Дана строка: ".3 + 1.56 = "
-// подсчитать результат и добавить к строке.
-
-public class task02 {
-    public static void main(String[] args) {
-        String str = ".3 + 1.56 = ";
-
-
-    }
-}
 
 
 

@@ -1,10 +1,11 @@
 package DZ_java;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
 import java.util.Random;
 
 import static java.lang.System.*;
+import static java.util.Collections.min;
 
 //Пусть дан произвольный список из 100 целых чисел.
 //
@@ -24,16 +25,16 @@ public class DZ03 {
         list.removeIf(n -> n % 2 == 0);
         out.println("Список без четных чисел: " + list);
 
-
+        int min = Collections.min(list);
+        int max = Collections.max(list);
+        double average = list.stream()
+                .mapToInt(Integer::intValue)
+                .average()
+                .orElse(0);
+        out.println("Минимальное значение: " + min);
+        out.println("Максимальное значение: " + max);
+        out.println("Среднее арифметическое значение: " + average);
     }
 }
 
 
-//int min = Collections.min(list);
-//        int max = Collections.max(list);
-//        double average = list.stream().mapToInt(Integer::intValue).average().orElse(0);
-//
-//        System.out.println("Минимальное значение: " + min);
-//        System.out.println("Максимальное значение: " + max);
-//        System.out.println("Среднее арифметическое значение: " + average);
-//    }

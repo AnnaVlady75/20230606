@@ -3,7 +3,6 @@ import static java.lang.System.*;
 import java.util.*;
 //1. Организовать ввод и
 // хранение данных пользователей. ФИО возраст и пол
-
 public class Sem4 {
     public static void main(String[] args) {
         ArrayList<String> people = new ArrayList<>();
@@ -42,7 +41,7 @@ public class Sem4 {
         }
         //4. реализовать сортировку по возрасту с использованием индексов
         //List keys = 0,1,2,3,4,5,
-        ArrayList keys = new ArrayList<>();
+        //ArrayList keys = new ArrayList<>();
 
     }
 

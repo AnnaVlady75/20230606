@@ -1,11 +1,16 @@
 package DZ_java;
+
 import static java.lang.System.*;
+
 import java.util.*;
+import java.util.stream.IntStream;
+
 //1. Организовать ввод и
 // хранение данных пользователей. ФИО возраст и пол
 public class DZ04 {
     public static void main(String[] args) {
         ArrayList<String> people = new ArrayList<>();
+
         Scanner iScanner = new Scanner(in);
         out.println("Количество вводимых данных: ");
         int n = Integer.parseInt(iScanner.nextLine());
@@ -22,9 +27,10 @@ public class DZ04 {
             String[] my_list = people.get(i).split(" ");
             out.println(my_list[0] + " "
                     + my_list[1].toUpperCase().charAt(0) + "."
-                    + my_list[2].toUpperCase().charAt(0) + "."+ " "
+                    + my_list[2].toUpperCase().charAt(0) + "." + " "
                     + my_list[3] + " " + my_list[4]);
         }
+
         //3. добавить возможность выхода
         // или вывода списка отсортированного по возрасту!)
         //people.sort(Comparator.naturalOrder());
@@ -38,30 +44,13 @@ public class DZ04 {
         out.println("Отсортированные данные по возрасту: ");
         for (int i = 0; i < people.size(); i++) {
             String[] my_list = people.get(i).split(" ");
-            out.println(my_list[0] + " " + my_list[1].toUpperCase().charAt(0) + "."
-                    + my_list[2].toUpperCase().charAt(0) + "." + my_list[3] + " " + my_list[4]);
+            String res = my_list[0] + " " + my_list[1].toUpperCase().charAt(0) + "."
+                    + my_list[2].toUpperCase().charAt(0) + "." + " "
+                    + my_list[3] + " " + my_list[4];
+            out.println(res);
         }
-        //4. реализовать сортировку по возрасту с использованием индексов
-//        int[] index = new int[people.size()];
-//        Object[] input = people.toArray();
-//        for (int i = 0; i < people.size(); i++) {
-//            index[i] = i+1;
-//        }
-//        for (int i = people.size()-1; i > 0; i++) {
-//            for (int j = 0; j < i; j++) {
-//                int temp = index[j];
-//                index[j]= index[i];
-//                index[i]= temp;
-//            }
-//        }
-//        System.out.print("Отсортированные символы: ");
-//        for (int i = 0; i < people.size(); i++)
-//            System.out.printf("%2c", input[i]);
-//        System.out.printf("\nИндексы до сортировки: ");
-//        for (int i = 0; i < people.size(); i++)
-//            System.out.printf("%2d", index[i]);
-//        System.out.println();
     }
 }
+
 
 

@@ -1,6 +1,8 @@
 import static java.lang.System.*;
 
 import java.util.*;
+import java.util.stream.IntStream;
+
 //1. Организовать ввод и
 // хранение данных пользователей. ФИО возраст и пол
 public class Sem4 {
@@ -23,6 +25,8 @@ public class Sem4 {
             String[] my_list = people.get(i).split(" ");
             out.println(my_list[0] + " " + my_list[1].toUpperCase().charAt(0) + "."
                     + my_list[2].toUpperCase().charAt(0) + "." + my_list[3]);
+            IntStream.range(0,my_list.length)
+                    .forEach(index->out.print(index));
         }
         //3. добавить возможность выхода
         // или вывода списка отсортированного по возрасту!)

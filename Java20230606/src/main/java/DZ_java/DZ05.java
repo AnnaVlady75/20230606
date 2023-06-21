@@ -3,6 +3,7 @@ package DZ_java;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
 //Реализуйте структуру телефонной книги с помощью HashMap.
 //Программа также должна учитывать, что во входной структуре
 // будут повторяющиеся имена с разными телефонами,
@@ -24,6 +25,7 @@ public class DZ05 {
         name4.add("Olga");
         phoneBook.putIfAbsent("+375254378800,+375293442010,+375445607373", name4);
 
-        System.out.println("Телефонная книга "+phoneBook);
+        System.out.println("Телефонная книга по убыванию числа телефонов" + phoneBook);
+        System.out.println("Как-то так!)))");
     }
 }

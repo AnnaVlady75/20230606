@@ -26,7 +26,6 @@ public class DZ05 {
         phoneBook.putIfAbsent("+375254378800,+375293442010,+375445607373", name4);
 
         System.out.println("Телефонная книга по убыванию числа телефонов" );
-
         phoneBook.forEach((key, value) ->
                 System.out.println(value + " " + key));
         System.out.println("Как-то так)))");

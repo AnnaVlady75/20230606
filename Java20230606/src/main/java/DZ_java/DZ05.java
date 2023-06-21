@@ -16,7 +16,7 @@ public class DZ05 {
         name1.add("Irina");
         phoneBook.putIfAbsent("+375298075547,+375447652213", name1);
         ArrayList<String> name2 = new ArrayList<>();
-        name2.add("Deinis");
+        name2.add("Denis");
         phoneBook.putIfAbsent("+375299875634", name2);
         ArrayList<String> name3 = new ArrayList<>();
         name3.add("Irina");
@@ -25,7 +25,10 @@ public class DZ05 {
         name4.add("Olga");
         phoneBook.putIfAbsent("+375254378800,+375293442010,+375445607373", name4);
 
-        System.out.println("Телефонная книга по убыванию числа телефонов" + phoneBook);
-        System.out.println("Как-то так!)))");
+        System.out.println("Телефонная книга по убыванию числа телефонов" );
+
+        phoneBook.forEach((key, value) ->
+                System.out.println(value + " " + key));
+        System.out.println("Как-то так)))");
     }
 }

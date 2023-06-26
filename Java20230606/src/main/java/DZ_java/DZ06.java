@@ -20,21 +20,45 @@ public class DZ06 {
         while (it.hasNext()) {
             System.out.println(it.next());
         }
-        System.out.println(((Set<Integer>) mySet).elemByIndex(0));
+        System.out.println(mySet.elemByIndex(0));
+        System.out.println(mySet.toString());
+        System.out.println(mySet.remove(555));
+        System.out.println(mySet.size());
+        System.out.println(mySet.isEmpty());
     }
 }
 class Set<E> {
     private HashMap<E, Object> set = new HashMap<>();
     private static final Object VALL = new Object();
-
+    ////метод, который добавляет данные в множество
     public boolean add(E tel) {
         return set.put(tel, VALL) == null;
     }
-
+    //метод, который достает данные из множества
     public Iterator<E> iterator() {
         return set.keySet().iterator();
     }
+    //метод позволяющий читать элементы по индексу
     int elemByIndex(int index){
         return (Integer)set.keySet().toArray()[index];
+    }
+    //метод toString возвращающий строку с элементами множества
+    public String toString(){
+        return set.keySet().toString();
+    }
+    //метод, удалющий ключ значение по ключу из множества
+    public boolean remove(E num){
+        return set.remove(num) == VALL;
+    }
+    //метод, который возвращает количество элементов множества
+    public int size(){
+        return set.size();
+    }
+    //метод, который взвращает истину, если пустой
+    public boolean isEmpty(){
+        return set.isEmpty();
+    }
+
+     {
     }
 }

@@ -20,8 +20,8 @@ public class DZ06 {
         while (it.hasNext()) {
             System.out.println(it.next());
         }
-        System.out.println(mySet.elemByIndex(0));
         System.out.println(mySet.toString());
+        System.out.println(mySet.elemByIndex(0));
         System.out.println(mySet.remove(555));
         System.out.println(mySet.size());
         System.out.println(mySet.isEmpty());
@@ -34,6 +34,10 @@ class Set<E> {
     public boolean add(E tel) {
         return set.put(tel, VALL) == null;
     }
+    //метод toString возвращающий строку с элементами множества
+    public String toString(){
+        return set.keySet().toString();
+    }
     //метод, который достает данные из множества
     public Iterator<E> iterator() {
         return set.keySet().iterator();
@@ -41,10 +45,6 @@ class Set<E> {
     //метод позволяющий читать элементы по индексу
     int elemByIndex(int index){
         return (Integer)set.keySet().toArray()[index];
-    }
-    //метод toString возвращающий строку с элементами множества
-    public String toString(){
-        return set.keySet().toString();
     }
     //метод, удалющий ключ значение по ключу из множества
     public boolean remove(E num){
@@ -57,8 +57,5 @@ class Set<E> {
     //метод, который взвращает истину, если пустой
     public boolean isEmpty(){
         return set.isEmpty();
-    }
-
-     {
     }
 }

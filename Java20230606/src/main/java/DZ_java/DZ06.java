@@ -31,8 +31,8 @@ class Set<E> {
     private HashMap<E, Object> set = new HashMap<>();
     private static final Object VALL = new Object();
     ////метод, который добавляет данные в множество
-    public boolean add(E tel) {
-        return set.put(tel, VALL) == null;
+    public boolean add(E num) {
+        return set.put(num, VALL) == null;
     }
     //метод toString возвращающий строку с элементами множества
     public String toString(){
